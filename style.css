@@ -84,13 +84,14 @@ body{
     align-items:center;
     text-align:center;
     padding:120px 20px;
-     background:
-    linear-gradient(rgba(0,0,0,.55),
-    rgba(0,0,0,.75)),
-    url("images/hero-bg.jpg");
+    background:
+    linear-gradient(rgba(0,0,0,.60),
+    rgba(0,0,0,.80)),
+    url("images/enderman.jpg");
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hero-content{
