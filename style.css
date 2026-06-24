@@ -278,23 +278,18 @@ body{
 .contact-box{
     max-width:900px;
     margin:auto;
-    padding:25px;
+    text-align:center;
     background:rgba(255,255,255,.04);
     border:1px solid rgba(168,85,247,.25);
     border-radius:30px;
-    text-align:center;
+    padding:25px;
 }
 
 .contact-box img{
     width:100%;
-    max-width:850px;
     display:block;
-    margin:0 auto 25px;
-    border-radius:25px;
-}
-
-.contact-box .join-btn{
-    margin-top:0;
+    border-radius:20px;
+    margin-bottom:20px;
 }
 /* =========================
    FOOTER
