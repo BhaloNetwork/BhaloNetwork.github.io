@@ -309,6 +309,16 @@ body{
     border-radius:30px;
 }
 
+.contact-box .join-btn{
+    position:absolute;
+    left:50%;
+    bottom:30px;
+    transform:translateX(-50%);
+
+    margin:0;
+    z-index:10;
+}
+
 /* Button image ke upar */
 
 .contact-box .join-btn{
