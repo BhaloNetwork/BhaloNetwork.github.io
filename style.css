@@ -273,30 +273,24 @@ body{
    CONTACT
 ========================= */
 
+.contact-box{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:30px;
+    padding:40px;
+}
+
 .contact-box img{
     width:100%;
     max-width:900px;
     height:auto;
     display:block;
     margin:0 auto 30px;
-    border-radius:20px;
-}
-
-.contact-box h2{
-    margin-bottom:15px;
-    color:#c084fc;
-}
-
-.contact-box p{
-    margin-bottom:25px;
-    color:#d4d4d4;
-}
-
-.contact-box img{
-    width:100%;
     border-radius:25px;
 }
-
 /* =========================
    FOOTER
 ========================= */
