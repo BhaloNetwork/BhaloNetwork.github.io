@@ -291,6 +291,11 @@ body{
     color:#d4d4d4;
 }
 
+.contact-box img{
+    width:100%;
+    border-radius:25px;
+}
+
 /* =========================
    FOOTER
 ========================= */
