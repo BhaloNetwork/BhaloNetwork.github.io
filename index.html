@@ -1,358 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BHALO NETWORK</title>
 
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0b1120;
-color:white;
-overflow-x:hidden;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(11,17,32,.95);
-backdrop-filter:blur(12px);
-z-index:999;
-}
-
-.logo{
-font-size:28px;
-font-weight:800;
-color:#7289da;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-weight:500;
-}
-
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1920&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:85px;
-font-weight:800;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:22px;
-margin-bottom:35px;
-opacity:.95;
-}
-
-.discord-btn{
-display:inline-block;
-padding:18px 40px;
-background:#5865F2;
-color:white;
-text-decoration:none;
-border-radius:14px;
-font-weight:700;
-transition:.3s;
-}
-
-.discord-btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 30px #5865F2;
-}
-
-section{
-padding:100px 10%;
-text-align:center;
-}
-
-.section-title{
-font-size:45px;
-margin-bottom:20px;
-}
-
-.about p{
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#d1d5db;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.card{
-background:#111827;
-padding:30px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-margin-bottom:15px;
-}
-
-.card p{
-color:#cbd5e1;
-}
-
-.socials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-margin-top:40px;
-}
-
-.socials a{
-background:#111827;
-padding:18px;
-border-radius:14px;
-text-decoration:none;
-color:white;
-font-weight:600;
-transition:.3s;
-}
-
-.socials a:hover{
-background:#5865F2;
-}
-
-.cta{
-background:#111827;
-}
-
-.cta h2{
-font-size:50px;
-margin-bottom:20px;
-}
-
-.cta p{
-margin-bottom:30px;
-color:#cbd5e1;
-}
-
-footer{
-background:#020617;
-padding:25px;
-text-align:center;
-color:#94a3b8;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:48px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-}
-
-</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 
 <nav>
 
-<div class="logo">BHALO NETWORK</div>
+<div class="logo">
+
+<span class="logo-icon">BN</span>
+
+<span class="logo-text">
+BHALO <span>NETWORK</span>
+</span>
+
+</div>
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#giveaways">Giveaways</a></li>
-<li><a href="#creators">Creators</a></li>
-<li><a href="#socials">Socials</a></li>
+
+<li><a href="#home">HOME</a></li>
+
+<li><a href="#about">ABOUT</a></li>
+
+<li><a href="#giveaways">GIVEAWAYS</a></li>
+
+<li><a href="#creators">CREATORS</a></li>
+
+<li><a href="#socials">SOCIALS</a></li>
+
+<li><a href="#contact">CONTACT</a></li>
+
 </ul>
+
+<a href="https://discord.gg/5B2T7Pcj5N"
+class="btn-discord"
+target="_blank">
+
+<i class="fab fa-discord"></i>
+
+JOIN DISCORD
+
+</a>
 
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h3>WELCOME TO</h3>
+
+<h1>
+BHALO
+<span>NETWORK</span>
+</h1>
+
+<p>
+Creators • Friends • Collaborations
+</p>
+
+<p class="hero-desc">
+
+A growing community for creators,
+gamers, streamers, editors and friends.
+
+Connect, collaborate and grow together.
+
+</p>
+
+<a href="https://discord.gg/5B2T7Pcj5N"
+class="btn-primary"
+target="_blank">
+
+<i class="fab fa-discord"></i>
+
+JOIN DISCORD NOW
+
+</a>
+
+<div class="hero-features">
 
 <div>
+<i class="fas fa-users"></i>
+ACTIVE COMMUNITY
+</div>
 
-<h1>BHALO NETWORK</h1>
+<div>
+<i class="fas fa-gift"></i>
+WEEKLY GIVEAWAYS
+</div>
+
+<div>
+<i class="fas fa-heart"></i>
+FRIENDLY ENVIRONMENT
+</div>
+
+<div>
+<i class="fas fa-star"></i>
+CREATOR SUPPORT
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-image">
+
+<img src="images/about-image.png">
+
+</div>
+
+<div class="about-content">
+
+<h4>ABOUT BHALO NETWORK</h4>
+
+<h2>WE BUILD CONNECTIONS</h2>
 
 <p>
-Creators • Friends • Collaborations • Giveaways
+
+BHALO NETWORK is more than just a server,
+it's a family.
+
+We help creators grow,
+gamers find teammates and friends,
+and build an amazing community together.
+
 </p>
 
-<a href="https://discord.gg/5B2T7Pcj5N" target="_blank" class="discord-btn">
-JOIN DISCORD NOW
+<div class="about-list">
+
+<div>
+<i class="fas fa-users"></i>
+Creators & Streamers
+</div>
+
+<div>
+<i class="fas fa-user-friends"></i>
+Make New Friends
+</div>
+
+<div>
+<i class="fas fa-star"></i>
+Collaborate & Grow
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GIVEAWAYS -->
+
+<section class="giveaways" id="giveaways">
+
+<h4>COMMUNITY GIVEAWAYS</h4>
+
+<h2>EXCITING REWARDS AWAIT!</h2>
+
+<div class="giveaway-grid">
+
+<div class="giveaway-card">
+
+<h3>Discord Nitro</h3>
+
+<p>
+Win Discord Nitro and enjoy premium perks.
+</p>
+
+</div>
+
+<div class="giveaway-card">
+
+<h3>Redeem Codes</h3>
+
+<p>
+Participate in events and win amazing redeem codes.
+</p>
+
+</div>
+
+<div class="giveaway-card">
+
+<h3>Exclusive Rewards</h3>
+
+<p>
+Special rewards only for active members.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat">
+<h2>15,000+</h2>
+<p>MEMBERS</p>
+</div>
+
+<div class="stat">
+<h2>350+</h2>
+<p>ONLINE NOW</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>GIVEAWAYS</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>ACTIVE STAFF</p>
+</div>
+
+</section>
+
+<!-- SOCIALS -->
+
+<section class="socials" id="socials">
+
+<h4>FOLLOW BHALO NETWORK</h4>
+
+<h2>STAY CONNECTED</h2>
+
+<div class="social-grid">
+
+<a href="https://www.youtube.com/@bhalonetwork">
+YouTube
+</a>
+
+<a href="https://www.instagram.com/bhalonetwork/">
+Instagram
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61591309078915">
+Facebook
+</a>
+
+<a href="https://www.tiktok.com/@bhaloetwork">
+TikTok
+</a>
+
+<a href="https://www.threads.com/@bhalonetwork">
+Threads
+</a>
+
+<a href="https://x.com/BhaloNetwork">
+X (Twitter)
 </a>
 
 </div>
 
 </section>
 
-<section id="about" class="about">
+<!-- FINAL CTA -->
 
-<h2 class="section-title">
-About BHALO NETWORK
-</h2>
+<section class="cta" id="contact">
 
-<p>
-BHALO NETWORK is a growing community built for creators,
-gamers, streamers, editors and friends. Connect with talented
-people, build friendships, collaborate on content and enjoy
-community events together.
-</p>
-
-</section>
-
-<section id="giveaways">
-
-<h2 class="section-title">
-🎁 Community Giveaways
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Discord Nitro</h3>
-<p>Win Discord Nitro and premium rewards.</p>
-</div>
-
-<div class="card">
-<h3>Gift Cards</h3>
-<p>Regular events with exciting prizes.</p>
-</div>
-
-<div class="card">
-<h3>Exclusive Rewards</h3>
-<p>Special perks only for community members.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="creators">
-
-<h2 class="section-title">
-Creators & Collaborations
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Find Creators</h3>
-<p>Meet YouTubers, editors and streamers.</p>
-</div>
-
-<div class="card">
-<h3>Make Friends</h3>
-<p>Join an active and friendly community.</p>
-</div>
-
-<div class="card">
-<h3>Collaborate</h3>
-<p>Work together on videos, projects and events.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="socials">
-
-<h2 class="section-title">
-Follow BHALO NETWORK
-</h2>
-
-<div class="socials">
-
-<a href="https://www.youtube.com/@bhalonetwork" target="_blank">📺 YouTube</a>
-
-<a href="https://www.instagram.com/bhalonetwork/" target="_blank">📷 Instagram</a>
-
-<a href="https://www.facebook.com/profile.php?id=61591309078915" target="_blank">📘 Facebook</a>
-
-<a href="https://www.tiktok.com/@bhaloetwork" target="_blank">🎵 TikTok</a>
-
-<a href="https://www.threads.com/@bhalonetwork" target="_blank">🧵 Threads</a>
-
-<a href="https://x.com/BhaloNetwork" target="_blank">𝕏 X (Twitter)</a>
-
-</div>
-
-</section>
-
-<section class="cta">
+<div class="cta-content">
 
 <h2>
-Ready To Join?
+READY TO JOIN THE ADVENTURE?
 </h2>
 
 <p>
-Creators • Friends • Giveaways • Collaborations
+Be a part of the most active and friendly community.
 </p>
 
-<a href="https://discord.gg/5B2T7Pcj5N" target="_blank" class="discord-btn">
-JOIN DISCORD
+<a href="https://discord.gg/5B2T7Pcj5N"
+target="_blank"
+class="btn-primary">
+
+JOIN DISCORD NOW
+
 </a>
+
+</div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-© 2026 BHALO NETWORK — All Rights Reserved
+
+<div class="footer-logo">
+BHALO NETWORK
+</div>
+
+<p>
+© 2026 BHALO NETWORK. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
