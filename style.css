@@ -273,23 +273,28 @@ body{
    CONTACT
 ========================= */
 
+/* CONTACT */
+
 .contact-box{
-    max-width:100px;
+    max-width:900px;
     margin:auto;
-    text-align:center;
+    padding:25px;
     background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(168,85,247,.25);
     border-radius:30px;
-    padding:40px;
+    text-align:center;
 }
 
 .contact-box img{
     width:100%;
-    max-width:900px;
-    height:auto;
+    max-width:850px;
     display:block;
-    margin:0 auto 30px;
+    margin:0 auto 25px;
     border-radius:25px;
+}
+
+.contact-box .join-btn{
+    margin-top:0;
 }
 /* =========================
    FOOTER
