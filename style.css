@@ -304,3 +304,95 @@ width:45px;
 }
 
 }
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features{
+
+    padding:120px 8%;
+
+    text-align:center;
+
+}
+
+.features h2{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:50px;
+
+    color:#6fdcff;
+
+    margin-bottom:70px;
+
+    text-shadow:0 0 18px #00c8ff;
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(20,25,45,.55);
+
+    border:1px solid rgba(0,180,255,.2);
+
+    border-radius:20px;
+
+    padding:40px 25px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(0,170,255,.12);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(0,200,255,.45);
+
+    border-color:#00c8ff;
+
+}
+
+.icon{
+
+    font-size:52px;
+
+    margin-bottom:18px;
+
+}
+
+.card h3{
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+    color:#6fdcff;
+
+}
+
+.card p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+
+    font-size:16px;
+
+}
