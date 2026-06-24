@@ -3,289 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHALO NETWORK | Official Hub</title>
-    <!-- Google Fonts for Minecraft/Pixel Vibe and Clean Body Text -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;600&family=VT323&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Social Media Icons -->
+    <title>Bhalo Network Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    
-    <style>
-        /* Base Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        :root {
-            --mc-dark: #0a0a0a;
-            --mc-gray: #242424;
-            --mc-light-gray: #4a4a4a;
-            --mc-border: #000000;
-            --mc-text: #ffffff;
-            --mc-green: #55FF55;
-            --mc-aqua: #4AEDF0;
-            --mc-gold: #FFAA00;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--mc-dark);
-            color: var(--mc-text);
-            overflow-x: hidden;
-        }
-        h1, h2, h3, .pixel-text {
-            font-family: 'VT323', monospace;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Video Background Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .video-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            z-index: -2;
-            object-fit: cover;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(10,10,10,1));
-            z-index: -1;
-        }
-        .hero h1 {
-            font-size: 5.5rem;
-            color: var(--mc-text);
-            text-shadow: 5px 5px 0px #000;
-            margin-bottom: 5px;
-            animation: fadeInDown 1s ease;
-        }
-        .hero p {
-            font-size: 1.6rem;
-            color: #dddddd;
-            margin-bottom: 35px;
-            max-width: 700px;
-            text-shadow: 2px 2px 0px #000;
-            font-family: 'VT323', monospace;
-            animation: fadeInUp 1s ease;
-        }
-
-        /* Cinematic Minecraft Button */
-        .cta-btn {
-            display: inline-block;
-            font-family: 'VT323', monospace;
-            font-size: 2.3rem;
-            padding: 14px 45px;
-            color: #fff;
-            background-color: #4a4a4a;
-            text-decoration: none;
-            border: 4px solid var(--mc-border);
-            box-shadow: inset -4px -4px 0px #2a2a2a, inset 4px 4px 0px #7a7a7a;
-            cursor: pointer;
-            position: relative;
-            transition: all 0.1s ease;
-            animation: pulse 2s infinite;
-        }
-        .cta-btn:hover {
-            background-color: #3f9b42;
-            box-shadow: inset -4px -4px 0px #1e5e22, inset 4px 4px 0px #82c684;
-            color: #fff;
-            transform: scale(1.05);
-        }
-        .cta-btn:active {
-            transform: scale(0.95);
-            box-shadow: inset 4px 4px 0px #1e5e22, inset -4px -4px 0px #82c684;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 3.8rem;
-            margin-bottom: 60px;
-            color: var(--mc-gold);
-            text-shadow: 3px 3px 0px #000;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-        }
-        .card {
-            background-color: var(--mc-gray);
-            border: 4px solid var(--mc-border);
-            box-shadow: inset -4px -4px 0px #111, inset 4px 4px 0px #444;
-            padding: 35px;
-            text-align: center;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--mc-aqua);
-        }
-        .card i {
-            font-size: 3.2rem;
-            color: var(--mc-aqua);
-            margin-bottom: 15px;
-        }
-        .card h3 {
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-            color: #fff;
-            text-shadow: 2px 2px 0px #000;
-        }
-        .card p {
-            font-size: 1.05rem;
-            color: #cccccc;
-            line-height: 1.6;
-        }
-
-        /* Social Matrix Hub */
-        .socials {
-            padding: 100px 20px;
-            background-color: #121212;
-            border-top: 4px solid var(--mc-border);
-            border-bottom: 4px solid var(--mc-border);
-        }
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .social-tile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 20px;
-            background-color: var(--mc-gray);
-            border: 4px solid var(--mc-border);
-            box-shadow: inset -3px -3px 0px #111, inset 3px 3px 0px #444;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .social-tile i {
-            font-size: 2.8rem;
-            margin-bottom: 12px;
-        }
-        .social-tile span {
-            font-family: 'VT323', monospace;
-            font-size: 1.6rem;
-            text-shadow: 1px 1px 0px #000;
-        }
-        
-        /* Brand Specific Colors on Hover */
-        .yt:hover { background-color: #ff0000; border-color: #fff; }
-        .insta:hover { background-color: #e1306c; border-color: #fff; }
-        .tt:hover { background-color: #000000; border-color: var(--mc-aqua); }
-        .fb:hover { background-color: #1877f2; border-color: #fff; }
-        .threads:hover { background-color: #ffffff; color: #000; border-color: #000; }
-        .x-twitter:hover { background-color: #141414; border-color: #fff; }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-25px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(25px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
-        /* Responsive Breakpoints */
-        @media(max-width: 768px) {
-            .hero h1 { font-size: 3.8rem; }
-            .hero p { font-size: 1.3rem; }
-            .cta-btn { font-size: 1.9rem; padding: 10px 35px; }
-            .section-title { font-size: 3rem; }
-        }
-    </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">BHALO NETWORK</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Giveaways</a>
+            <a href="#">Creators</a>
+            <a href="#">Socials</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a href="#" class="btn-discord-nav"><i class="fab fa-discord"></i> Join Discord</a>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Background Video: Loop set with a premium aesthetic dark landscape -->
-        <video class="video-bg" autoplay loop muted playsinline>
-            <source src="https://mixkit.co" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-
-        <h1>BHALO NETWORK</h1>
-        <p>GIVEAWAYS • GIFT REDEEM CODES • COLLABORATIONS</p>
-        
-        <!-- Live Discord Invite Link Attached -->
-        <a href="https://discord.gg/5B2T7Pcj5N" class="cta-btn" target="_blank">JOIN SERVER NOW</a>
-    </section>
-
-    <!-- Perks / Offerings Section -->
-    <section class="features">
-        <h2 class="section-title">What We Do</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-gift"></i>
-                <h3>Epic Giveaways</h3>
-                <p>Regular events featuring loaded prize drops, roles, and premium item keys for our dedicated community members.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-key"></i>
-                <h3>Redeem Codes</h3>
-                <p>Unlock active premium keys, reward drops, and special store gift codes directly distributed inside our hub.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-handshake"></i>
-                <h3>Collabs & Events</h3>
-                <p>Teaming up with skilled creators and top-tier gaming systems to launch unique server-wide cross-overs.</p>
-            </div>
+        <div class="hero-content">
+            <h3>WELCOME TO</h3>
+            <h1>BHALO NETWORK</h1>
+            <p class="subtitle">CREATORS • FRIENDS • COLLABORATIONS</p>
+            <p class="description">A growing community for creators, gamers, streamers, editors and friends. Connect, collaborate and grow together!</p>
+            <a href="#" class="btn-discord-large"><i class="fab fa-discord"></i> JOIN DISCORD NOW</a>
         </div>
     </section>
 
-    <!-- Social Platforms Matrix Hub -->
+    <!-- Features Section -->
+    <section class="features">
+        <h2>WE BUILD CONNECTIONS</h2>
+        <div class="feature-box">
+            <h3>Creators & Streamers</h3>
+            <p>Find creators, streamers and editors to collaborate with.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Make New Friends</h3>
+            <p>Meet new people and build long-term friendships.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item"><h3>15,000+</h3><p>Members</p></div>
+        <div class="stat-item"><h3>350+</h3><p>Online Now</p></div>
+        <div class="stat-item"><h3>50+</h3><p>Giveaways</p></div>
+    </section>
+
+    <!-- Socials Section -->
     <section class="socials">
-        <h2 class="section-title">Connect With Us</h2>
+        <h2>STAY CONNECTED</h2>
         <div class="social-grid">
-            <a href="https://www.youtube.com/@bhalonetwork" class="social-tile yt" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-                <span>YouTube</span>
-            </a>
+            <a href="#" class="social-btn"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-btn"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" class="social-btn"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 BHALO NETWORK. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
