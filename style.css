@@ -1,1 +1,306 @@
+/* ===========================
+   BHALO NETWORK - PART 1
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    color:white;
+
+    background:
+    linear-gradient(rgba(8,10,20,.72),rgba(5,8,20,.82)),
+    url("https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=2000&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,170,255,.15);
+
+    z-index:999;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:25px;
+
+    font-weight:700;
+
+    color:#55d9ff;
+}
+
+.logo img{
+
+    width:58px;
+
+    filter:drop-shadow(0 0 18px #00c8ff);
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.35s;
+}
+
+nav ul li a:hover{
+
+    color:#00c8ff;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:0 20px;
+}
+
+.hero-content{
+
+    max-width:850px;
+
+    animation:fadeUp 1s ease;
+}
+
+.hero h1{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:72px;
+
+    margin-bottom:20px;
+
+    color:#7ae4ff;
+
+    text-shadow:
+
+    0 0 15px #00c8ff,
+
+    0 0 35px #008cff;
+}
+
+.hero p{
+
+    font-size:23px;
+
+    color:#d9d9d9;
+
+    margin-bottom:45px;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+}
+
+.buttons a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:18px 42px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    font-size:17px;
+}
+
+.discord{
+
+    background:#0099ff;
+
+    box-shadow:0 0 20px #0099ff;
+}
+
+.youtube{
+
+    background:#202020;
+
+    border:2px solid #00bfff;
+}
+
+.buttons a:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 0 30px #00c8ff;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+nav ul{
+
+gap:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.buttons a{
+
+width:240px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+
+.logo img{
+
+width:45px;
+
+}
+
+}
