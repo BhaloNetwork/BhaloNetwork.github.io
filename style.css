@@ -310,21 +310,6 @@ body{
 
     box-shadow:0 0 25px rgba(168,85,247,.5);
 }
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    text-align:center;
-    padding:35px;
-    background:#05020c;
-    border-top:1px solid rgba(168,85,247,.25);
-}
-
-footer h2{
-    color:#c084fc;
-    margin-bottom:10px;
-}
 
 /* =========================
    ANIMATION
